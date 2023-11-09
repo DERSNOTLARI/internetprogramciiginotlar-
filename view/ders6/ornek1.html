@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 6 - Ornek 1</title>
+</head>
+<body>
+    İşlem Sonucu: <br> <input type="text" id="sonuc">
+    <script>
+        a = 17;
+        b = 7;
+        islem = "c";
+        switch(islem){
+            case "T":
+            case "t":
+                document.getElementById("sonuc").value=a+b;
+            break;
+            case "C":
+            case "c":
+                document.getElementById("sonuc").value=a*b;
+            break;
+            case "B":
+            case "b":
+                document.getElementById("sonuc").value=(a/b).toFixed(2);
+            break;
+            default:
+                document.getElementById("sonuc").value=a-b;
+            break;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Örnek 4 - Hafta 4</title>
+</head>
+<body>
+    <h2>Tek çift bulma</h2>
+    <script>
+        function hesapla(){
+            input = document.getElementById("input").value;
+
+        if(input % 2 == 0){
+            document.writeln("Sayı Çiftir");
+        }else{
+            document.writeln("Sayı Tek");
+        }
+        }
+    </script>
+    <input type="text" name="" id="input"><br><br>
+    <input type="button" value="Hesapla" onclick="hesapla()"><br><br>
+</body>
+</html>

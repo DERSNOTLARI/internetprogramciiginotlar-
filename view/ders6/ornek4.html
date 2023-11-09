@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 6 - Ornek 4</title>
+    <style>
+
+        body{
+            align-items: center;
+            justify-content: center;
+        }
+        .rb {
+            text-align: center;
+            font-size: 20px;
+            border-radius: 14px;
+            border-width: 4px;
+            color: blue;
+            background-color: yellow;
+        }
+
+        .buttons{
+            background-color: red;
+            text-align: center;
+            color: white;
+            border-radius: 14px;
+            padding: 8px;
+            border: 5px dotted blue;
+        }
+
+        .buttonOrtHes{
+            background-color: red;
+            text-align: center;
+            color: white;
+            border-radius: 8;
+            padding: 8px;
+            border: 5px solid yellow;
+        }
+
+        .legendText{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+   <script>
+    function hes(){
+        vz = document.getElementById("vz").value;
+        fn = document.getElementById("fn").value;
+        ort = vz*0.4+fn*0.6;
+        document.getElementById("ort").value=ort;
+    }
+
+    function ortHes(){
+        vz = document.getElementById("vz").value;
+        fn = document.getElementById("fn").value;
+        ort = vz*0.4+fn*0.6;
+        switch(true){
+            case ort>92:
+                document.getElementById("ort").value=ort+" - AA";
+            break;
+            case ort>85:
+                document.getElementById("ort").value=ort+" - BA";
+            break;
+            case ort>79:
+                document.getElementById("ort").value=ort+" - BB";
+            break;
+            case ort>73:
+                document.getElementById("ort").value=ort+" -CB";
+            break;
+            case ort>67:
+                document.getElementById("ort").value=ort+" - CC";
+            break;
+            case ort>61:
+                document.getElementById("ort").value=ort+" - DC";
+            break;
+            case ort>53:
+                document.getElementById("ort").value=ort+" - DD";
+            break;
+            case ort>39:
+                document.getElementById("ort").value=ort+" - FD";
+            break;
+            default:
+                document.getElementById("ort").value=ort+" - NULL FF";
+        }
+    }
+   </script>
+
+   <table width="230" bgcolor="lightblue">
+    <tr>
+        <td>
+            <fieldset >
+                <legend class="legendText">Not Hesapla</legend>
+                Vize: <br> 
+                <input class="rb" type="text" name="" id="vz"><br><br>
+                Final: <br>
+                <input class="rb" type="text" name="" id="fn"><br><br>
+                Ortlama: <br>
+                <input class="rb" type="text" name="" id="ort"><br><br>
+
+            </fieldset>
+        </td>
+    </tr>
+   </table>
+<br><br>
+   <table width="230" bgcolor="green">
+    <tr>
+        <td>
+            <fieldset align="center">
+                <legend class="legendText">Not Hesapla</legend>
+                <br>
+                <input class="buttons" type="button" value="Ortalama Hesapla" onclick="hes()"><br><br>
+                <input  class="buttonOrtHes" type="button" value="Haft Notu" onclick="ortHes()"><br>
+            </fieldset>
+            
+            
+        </td>
+    </tr>
+   </table>
+    
+</body>
+</html>

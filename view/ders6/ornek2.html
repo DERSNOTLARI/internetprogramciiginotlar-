@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 6 - Ornek 2</title>
+</head>
+<body>
+    Harf notu: <br>
+    <input type="text" name="" id="hrfnotu">
+    <script>
+        ort = 86;
+        switch(true){
+            case ort>92:
+                document.getElementById("hrfnotu").value=ort+" - AA";
+            break;
+            case ort>85:
+                document.getElementById("hrfnotu").value=ort+" - BA";
+            break;
+            case ort>79:
+                document.getElementById("hrfnotu").value=ort+" - BB";
+            break;
+            case ort>73:
+                document.getElementById("hrfnotu").value=ort+" -CB";
+            break;
+            case ort>67:
+                document.getElementById("hrfnotu").value=ort+" - CC";
+            break;
+            case ort>61:
+                document.getElementById("hrfnotu").value=ort+" - DC";
+            break;
+            case ort>53:
+                document.getElementById("hrfnotu").value=ort+" - DD";
+            break;
+            case ort>39:
+                document.getElementById("hrfnotu").value=ort+" - FD";
+            break;
+            default:
+                document.getElementById("hrfnotu").value=ort+" - NULL FF";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 6 - Ornek 5</title>
+</head>
+<body>
+    <h2>Döviz Kuru Hesabı</h2>
+    <table>
+        <tr>
+            <td>
+                TL giriniz <br>
+                <input type="text" name="" id="tl"><br>
+            </td>
+            <td>
+                <input type="button" value="Hesapla" onclick="hesapla()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" name="" id="dolar"><br>
+            </td>
+            <td> Dolar </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" name="" id="euro">
+            </td>
+            <td>
+                Euro
+            </td>
+        </tr>
+    </table>
+    <script>
+        function hesapla(){
+            tl = document.getElementById("tl").value;
+            sonucEuro = tl / 35;
+            sonucDolar = tl / 28;
+          document.getElementById("euro").value=sonucEuro.toFixed(2);
+          document.getElementById("dolar").value=sonucDolar.toFixed(2);
+
+   
+        }
+    </script>
+</body>
+</html>

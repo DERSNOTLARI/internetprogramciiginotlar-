@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Örnek 1 - Hafta 4</title>
+</head>
+<body>
+    <h2>Not Sorgulama</h2>
+    <script>
+        function hesapla(){
+        vz= document.getElementById("vize").value;
+        fn = document.getElementById("final").value;
+
+        ort = vz*0.4+fn*0.6;
+
+        if(ort >= 70){
+            document.writeln("Ortlama: ", ort ,": Geçer <br>");
+        }else{
+            document.writeln("Ortlama: ", ort ,": Kalır <br>");
+        }
+        }
+    </script>
+    Vize: <br>
+    <input type="text" name="" id="vize"><br><br>
+    Final: <br>
+    <input type="text" name="" id="final"><br><br>
+    <input type="button" value=" Hesapla " onclick="hesapla();"><br><br>
+</body>
+</html>

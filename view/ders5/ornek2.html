@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 5 - Ornek 2</title>
+</head>
+<body>
+    <script>
+        function metyaz(){
+            metin = document.getElementById('metin').value;
+            metinTekrar = document.getElementById('metinTekrar').value;
+
+        document.write("<font color='darkgreen' face='gabriola' size='5'>");
+            for(i=1;i<=metinTekrar;i++){
+                document.write(i,".",metin, "<br>"); 
+
+            }
+            document.write("</font>");
+        }
+    </script>
+
+    <table width="230" bgcolor="red">
+        <tr>
+            <td>
+                <fieldset><legend>&ensp; Metin Kutusu &ensp;</legend>
+                Metin Giriniz<br>
+                <input type="text" id="metin"><br><br>
+                Tekrarlama Sayısı:<br>
+                <input type="text" id="metinTekrar"><br><br>
+            </fieldset>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <input type="button" value="&emsp;Metni Yazdır&emsp;" onclick="metyaz()">
+</body>
+</html>

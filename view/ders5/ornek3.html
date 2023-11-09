@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 5 - Ornek 3</title>
+</head>
+<body>
+    <h2>While Döngüsüyle</h2>
+
+<script>
+function sayi()
+{
+    girilensayi=document.getElementById("girilensayi").value;
+
+i=1;
+while (i<=girilensayi)
+{
+    document.writeln("Sayı= ",i," Karaesi = ",i*i," Karekökü = ", Math.sqrt(i).toFixed(2),"<br>");
+    i++;
+}    
+}    
+
+</script>
+<table width="230" bgcolor="aqua"><tr><td>
+    <fieldset><legend>&ensp;&ensp;</legend>
+    Sayı Giriniz<br><input type="text" id="girilensayi"><br><br>
+    </fieldset>
+    </td></tr></table><br>
+    <input type="button" value="&emsp;Göster&emsp;" onclick="sayi()">
+
+</body>
+</html>
