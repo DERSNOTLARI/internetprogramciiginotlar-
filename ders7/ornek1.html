@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 7 - Ornek 1</title>
+</head>
+<style>
+    .rb{
+        text-align: right;
+        font-size: 26px;
+        border-radius: 0px;
+        border-width: 1px;
+        border-style: solid;
+        color: darkblue;
+        background-color: silver;
+    }
+
+    fieldset{
+        width: 200px;
+        margin-right: 960;
+        background-color: whitesmoke;
+    }
+</style>
+<body>
+    <fieldset>
+        <legend>Kur Hesapla</legend>
+        Tl Giriniz 
+        <input type="text" name="" id="tl" class="rb" onkeyup="hesapla()"> <br><br>
+        <input type="text" name="" id="euro" class="rb"> &emsp; Euro Alabilirsiniz <br><br> 
+        <input type="text" name="" id="dolar" class="rb"> &emsp; Dolar Alabilirsiniz <br><br>
+    </fieldset>
+    <script>
+        function hesapla(){
+            tl = document.getElementById("tl").value;
+            sonucEuro = tl / 35;
+            sonucDolar = tl / 28;
+          document.getElementById("euro").value=sonucEuro.toFixed(2);
+          document.getElementById("dolar").value=sonucDolar.toFixed(2);
+
+   
+        }
+    </script>
+</body>
+</html>

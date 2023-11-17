@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 7 - Ornek 3</title>
+</head>
+
+<style>
+    input{
+        background-color: green;
+        color: white;
+        size: 18px;
+    }
+
+    input:focus{
+        background-color: white;
+        color: black;
+    }
+    
+</style>
+<body>
+    Vize: <br>
+    <input type="text" name="" id="vize" onkeyup="hesapla()">
+    <br>
+    Final: <br>
+    <input type="text" name="" id="final" onkeyup="hesapla()">
+    <br>
+    Sonuç:
+    <br>
+    <input type="text" name="" id="sonuc">
+
+    <script>
+        function hesapla(){
+            vizedeger = document.getElementById("vize").value;
+        finaldeger = document.getElementById("final").value;
+
+        deger = vizedeger*0.4+finaldeger*0.6;
+
+        document.getElementById("sonuc").value=deger;
+        }
+    </script>
+</body>
+</html>

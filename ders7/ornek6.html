@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 7 - Ornek 6</title>
+    <script>
+        function adKontrol(){
+            if(document.getElementById("adi").value == ""){
+                document.getElementById("admesaj").innerHTML="Adınızı Girmediniz.";
+            }else{
+                document.getElementById("admesaj").innerHTML="Adınızı Girdiniz";
+            }
+        }
+
+        function adyaz(){
+            document.getElementById("admesaj").innerHTML="Adınzı Giriniz";
+        }
+
+        function soyadKontrol(){
+            if(document.getElementById("soyadi").value==""){
+                document.getElementById("soyadmesaj").innerHTML="Soyad Girmedin";
+            }else{
+                document.getElementById("soyadmesaj").innerHTML="Soyadınızı Girdiniz";
+            }
+        }
+
+        function soyadyaz(){
+            document.getElementById("soyadmesaj").innerHTML="Soyadınızı Giriniz.";
+        }
+
+    </script>
+</head>
+<body>
+
+    <input type="text" name="" id="adi" onblur="adKontrol()" onfocus="adyaz()">
+    <span id="admesaj" style="color: tomato;"></span>
+
+    <br><br>
+    <input type="text" name="" id="soyadi" onblur="soyadKontrol()" onfocus="soyadyaz()">
+    <span id="soyadmesaj" style="color: greenyellow;"></span>
+    
+</body>
+</html>

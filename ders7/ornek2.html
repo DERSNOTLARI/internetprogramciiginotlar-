@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .eo
+        {
+            text-align: right;
+            font-size: 26px;
+            border-radius:0px;
+            border-width: 1px;
+            border-style: solid;
+            color: darkblue;
+            background-color: silver;
+        }
+        fieldset {
+            margin-right: 960px;
+            background: whitesmoke;
+        }
+    </style>
+
+</head>
+<body>
+    
+<fieldset>
+    <legend>Döviz Kuru Hesabı - Üçlü Giriş</legend>
+    <input type="text" id="tl" class="eo" size="10" onkeyup="tlgiris()">&emsp;Tl Giriniz <br><br>
+    <input type="text" id="dolar" class="eo" size="10" onkeyup="dolargiris()" >&emsp;Dolar Alabilirsiniz<br><br>
+    <input type="text" id="euro" class="eo" size="10" onkeyup="eurogiris()" >&emsp;Euro Alabilirsiniz<br><br>
+    
+</fieldset>
+
+
+<script>
+
+function tlgiris()
+{
+    dolarkuru=28;
+    eurokuru=30;
+    tl=document.getElementById("tl").value;
+    sonucEuro = tl / eurokuru;
+    sonucDolar = tl / dolarkuru;
+    document.getElementById("euro").value=sonucEuro.toFixed(2);
+    document.getElementById("dolar").value=sonucDolar.toFixed(2); 
+}
+
+function dolargiris()
+{
+    dolarkuru=28;
+    eurokuru=30;
+    capraz=dolarkuru/eurokuru;
+    dolar=document.getElementById("dolar").value;
+    sonucEuro = dolar * capraz;
+    sonucTL = dolar * dolarkuru;
+    document.getElementById("euro").value=sonucEuro.toFixed(2);
+    document.getElementById("tl").value=sonucTL.toFixed(2); 
+}
+
+function eurogiris()
+{
+    dolarkuru=28;
+    eurokuru=30;
+    capraz=eurokuru / dolarkuru;
+    euro=document.getElementById("euro").value;
+    sonucDolar = euro * capraz;
+    sonucTL = euro * eurokuru;
+    document.getElementById("dolar").value=sonucDolar.toFixed(2);
+    document.getElementById("tl").value=sonucTL.toFixed(2); 
+}
+</script>
+</body>
+</html>

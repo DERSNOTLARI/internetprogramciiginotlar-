@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 7 - Ornek 4</title>
+</head>
+<body onload="hesapl()">
+    <script>
+        function hesapl(){
+            vz = 95;
+            fn= 60;
+            ortlama = vz*0.4+fn*0.7;
+
+            if(ortlama >= 70){
+                document.write("Vize = ", vz,"<br><br>");
+                document.write("Final = ", fn,"<br><br>");
+                document.write("Ortlama = ", ortlama,"<br><br>");
+                document.write("Geçer Not Aldınız","<br><br>");
+            }else{
+                document.write("Vize = ", vz,"<br><br>");
+                document.write("Final = ", fn,"<br><br>");
+                document.write("Ortlama = ", ortlama,"<br><br>");
+                document.write("Geçer Not Almadın","<br><br>");
+            }
+        }
+    </script>
+</body>
+</html>
